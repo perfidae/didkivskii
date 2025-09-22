@@ -53,6 +53,7 @@ justify-content: center;
 }
 
 main h2 {
+  color: white;
   text-align: center;
   margin: 20px 0;
   font-weight: 700;
