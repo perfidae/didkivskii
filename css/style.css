@@ -1,1 +1,199 @@
+/* Гарантуємо правильну модель блоку для всіх елементів */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+/* Загальні стилі */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #004225;
+  color: #222;
+}
+
+header {
+  background: #0095B6;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 700;
+}
+
+nav {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+nav a.active {
+  background: #2b1abf;
+  border-radius: 5px;
+}
+
+.nav{
+  margin-top: 15px;
+  margin-bottom: 15px;
+ display: flex;
+justify-content: center;
+}
+
+main h2 {
+  text-align: center;
+  margin: 20px 0;
+  font-weight: 700;
+}
+/* Сітка карток */
+.dogs {
+  display: grid;
+  grid-template-columns: repeat(2, 390px); /* по 2 картки в рядку */
+  justify-content: center;                 /* центр рядка */
+  row-gap: 20px;                           /* відстань між рядками */
+  column-gap: 20px;                        /* відстань між картками в рядку */
+  padding: 20px;
+}
+
+/* Картка */
+.card {
+  width: 390px;             /* фіксована ширина */
+  height: 460px;            /* фіксована висота */
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding-top: 65px;        /* відступ до картинки */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;           /* не стискається */
+}
+
+/* Картинка */
+.card img {
+  width: 260px !important;   /* фіксована ширина */
+  height: 260px !important;  /* фіксована висота */
+  object-fit: cover;         /* обрізає зайве без спотворення */
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Заголовок */
+.card h3 {
+  font-weight: 600;
+}
+
+/* Кнопка */
+.card a {
+  margin-top: auto;   /* кнопка завжди внизу картки */
+  padding: 8px 15px;
+  background: #0095B6;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.card a:hover {
+  background: #2b1abf;
+}
+
+/* Популярна сторінка */
+.info {
+  text-align: center;
+  padding: 20px;
+}
+
+.photos {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.photos img {
+  width: 40%;
+  border-radius: 5px;
+}
+
+.advantages {
+  background: #4a34eb;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.advantages h3 {
+  font-weight: 700;
+}
+
+.advantages ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.advantages ul li {
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.last-chance {
+  margin: 15px 0;
+  color: #ffebf0;
+  font-weight: 600;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: white;
+  color: #4a34eb;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background: #2b1abf;
+  color: white;
+}
+
+/* Футер */
+footer {
+  background: #4a34eb;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+footer .socials {
+  margin-bottom: 10px;
+}
+
+footer .socials img {
+  width: 30px;
+  margin: 0 5px;
+  vertical-align: middle;
+  transition: transform 0.3s;
+}
+
+footer .socials img:hover {
+  transform: scale(1.1);
+}
